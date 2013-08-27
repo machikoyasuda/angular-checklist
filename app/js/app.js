@@ -1,3 +1,8 @@
 'use strict';
 
-angular.module('checklist', ['checklist.controllers']);
+angular.module('checklist',
+  [
+    'firebase',
+    'checklist.controllers'
+  ]
+);
