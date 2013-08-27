@@ -1,0 +1,51 @@
+body {
+  background-color: #EBE1A6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 0;
+  height: 100%;
+}
+
+.wrap {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 40px;
+  color: #fff;
+}
+
+.text {
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: rgba(0,0,0,0);
+  border-style: none;
+  color: #ffffff;
+  width: 80%;
+  border-bottom: 2px solid rgba(255,255,255,.9);
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  float: right;
+  margin-right: -25px;
+}
+
+input:focus {
+  outline: none;
+  color: #ffffff;
+}
+
+
+ul, li {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+

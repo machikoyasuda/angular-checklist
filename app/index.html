@@ -4,26 +4,43 @@
   <meta charset="utf-8">
   <title>My AngularJS App</title>
   <link rel="stylesheet" href="css/app.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <h1>Launchlist</h1>
+<div class="wrap">
 
-  <li>
-    <span>To do thing</span>
-    <input type="checkbox">
-  </li>
+  <header>
+    <h1>Launchlist »</h1>
+  </header>
 
-  <form>
-    <input type="text" size="30" placeholder="Start">
-    <input type="submit" value="add">
-  </form>
+  <section>
+    <form data-ng-controller="AddCtrl">
+      <input type="text" class="text" data-ng-model="text" autofocus placeholder="{{myVar}}">
+      <input type="submit" value="+" data-ng-click="addItem()">
 
-  <span>Progress: 1/2 done</span>
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
+      <ul>
+        <li class="text" data-ng-repeat="item in items">{{item.text}}<input type="checkbox" name="box" value="check" class="checkbox">
+        </li>
+      </ul>
+
+    </form>
+  </section>
+
+  <section>
+    <span>Progress: 1/2 done / 50% done</span>
+  </section>
+
+  <div class="push"></div>
+
+</div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+-->
+<script src="lib/angular/angular.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
 </body>
 </html>
