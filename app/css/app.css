@@ -12,6 +12,7 @@ header {
   padding-bottom: .1em;
   border-bottom: 2px solid white;
   margin-bottom: 1em;
+  background-color: rgba(217,77,75, .4);
 }
 
 h1 {
@@ -27,10 +28,10 @@ h1 {
   background-color: rgba(130,201,195,.8);
   display: block;
   color: #fff;
-  border-radius: 50%;
-  margin-top: -3em;
   font-size: 15px;
   padding: .4em;
+  border-radius: 50%;
+  margin-top: -3em;
   margin-right: .2em;
   float: right;
 }
@@ -64,7 +65,8 @@ ul, li {
 
 .status-true {
   text-decoration: line-through;
-  color: rgb(152,126,59);
+  text-decoration-color: #fff;
+  color: rgba(152,126,59, .3);
 }
 
 .item {
@@ -81,7 +83,7 @@ ul, li {
   margin-bottom: 10px;
   padding-left: .3em;
   border-bottom: 2px solid rgba(130,201,195,.9);
-  width: 85%;
+  width: 75%;
 }
 
 .checkbox {
@@ -90,13 +92,15 @@ ul, li {
 }
 
 .graphite-flat-button {
-  position: relative;
-  vertical-align: top;
-  margin-right: 5px;
-  width: 2em;
-  height: 2em;
   float: right;
-  padding: 0;
+  font-size: 15px;
+  width: 35px;
+  height: 35px;
+  padding: .4em;
+  margin-top: .5em;
+  margin-right: .2em;
+
+  border-radius: 50%;
   font-size: 18px;
   color: white;
   text-align: center;
@@ -106,9 +110,17 @@ ul, li {
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border-radius: 50%;
 }
 
-.graphite-flat-button:active {
-  top: 1px;
+.graphite-flat-button {
+}
+
+footer {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  padding-left: .3em;
+  text-transform: uppercase;
+  border-top: 2px solid white;
+  background-color: rgba(217,77,75, .4);
 }

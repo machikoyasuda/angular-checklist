@@ -8,14 +8,14 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 </head>
 <body data-ng-controller="ItemCtrl">
-  <header style="background-color: rgba(217,77,75, .4);">
+  <header>
     <div class="progress" style="width: {{getPercent()}}"><h1>Checklist »</h1></div><span id="top">{{getPercent()}}</span>
   </header>
 
   <section>
     <form>
       <ul>
-        <li><input class="form" type="text" data-ng-model="text" autofocus placeholder="Start."><input type="submit" value="+" data-ng-click="addItem()" class="graphite-flat-button"></li>
+        <li><input class="form" type="text" data-ng-model="text" autofocus placeholder="Start."><button type="submit" data-ng-click="addItem()" class="graphite-flat-button">+</button></li>
 
         <li class="text status-{{item.status}}" data-ng-repeat="item in list.items"><span class="item">{{item.text}}</span><input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox"></li>
       </ul>
