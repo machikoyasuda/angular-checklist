@@ -12,11 +12,12 @@ angular.module('checklist.controllers', [])
 
       $scope.items = [];
       $scope.addItem = function(){
-        $scope.items.push({text:$scope.text, status:false});
+        if($scope.text){
+          $scope.items.push({text:$scope.text, status:false});
+        }
         $scope.list.items = $scope.items;
         $scope.text = '';
-        console.log(JSON.stringify($scope.items));
-        console.log(JSON.stringify($scope.items.length));
+        // console.log(JSON.stringify($scope.items));
       }
 
       $scope.getTotal = function(){
