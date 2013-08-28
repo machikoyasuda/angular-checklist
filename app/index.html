@@ -10,25 +10,24 @@
 <div class="wrap">
 
   <header>
-    <h1>Launchlist »</h1>
+    <h1>Checklist »</h1>
   </header>
 
-  <section data-ng-controller="AddCtrl">
+  <section data-ng-controller="ItemCtrl">
     <form>
-      <input type="text" class="text" data-ng-model="text" autofocus placeholder="{{myVar}}">
+      <input type="text" class="text" data-ng-model="text" autofocus placeholder="Start listing.">
       <input type="submit" value="+" data-ng-click="addItem()">
 
       <ul>
-        <li class="text done-{{item.done}}" data-ng-repeat="item in items">{{item.text}}
-        <input type="checkbox" data-ng-model="item.done" name="box" value="check" class="checkbox">
+        <li class="text status-{{item.status}}" data-ng-repeat="item in items">{{item.text}}
+        <input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox">
         </li>
       </ul>
 
     </form>
-  </section>
 
-  <section>
-    <span>Progress: Total on your list {{}} / 50% done</span>
+    <span>Total items: {{getTotal()}}</span><br>
+    <span>Items left: {{getRemaining()}}</span>
   </section>
 
   <div class="push"></div>

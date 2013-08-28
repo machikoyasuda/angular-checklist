@@ -30,7 +30,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-.done-true {
+.status-true {
   text-decoration: line-through;
   color: grey;
 }
@@ -45,12 +45,9 @@ input:focus {
   color: #ffffff;
 }
 
-
 ul, li {
   list-style-type: none;
   list-style-position: inside;
   margin: 0;
   padding: 0;
 }
-
-
