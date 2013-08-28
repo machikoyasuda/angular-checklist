@@ -2,38 +2,30 @@
 <html lang="en" data-ng-app="checklist">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Checklist »</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/app.css"/>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="wrap">
+  <header>
+    <h1>Checklist »</h1>
+  </header>
+  <section data-ng-controller="ItemCtrl">
+    <h2>You have {{getRemaining()}} items left.</h2>
 
-    <header>
-      <h1>Checklist »</h1>
-    </header>
+    <form>
+      <ul>
+        <li><input type="text" class="text" id="form" data-ng-model="text" autofocus placeholder="Start listing."><input type="submit" value="+" data-ng-click="addItem()" class="button"></li>
 
-    <section data-ng-controller="ItemCtrl">
-      <form>
-        <input type="text" class="text" data-ng-model="text" autofocus placeholder="Start listing.">
-        <input type="submit" value="+" data-ng-click="addItem()">
+        <li class="text status-{{item.status}}" data-ng-repeat="item in list.items">{{item.text}}
+        <input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox"></li>
+      </ul>
+    </form>
 
-        <ul>
-          <li class="text status-{{item.status}}" data-ng-repeat="item in list.items">{{item.text}}
-          <input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox">
-          </li>
-        </ul>
-      </form>
+  <footer><div id="progress" style="background-color: rgba(217,77,75, .4); width: {{getPercent()}}">{{getDone()}}/{{getTotal()}} = {{getPercent()}}</div></footer>
 
-      <span>You have {{getRemaining()}} items left.</span>
-
-      <div id="progress" style="background-color: rgba(239,121,63,0.9); width: {{getPercent()}}">{{getDone()}}/{{getTotal()}} = {{getPercent()}}</div>
-    </section>
-
-    <div class="push"></div>
-
-  </div>
+  </section>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
