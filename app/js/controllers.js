@@ -47,7 +47,7 @@ angular.module('checklist.controllers', [])
       }
 
       $scope.getPercent = function(){
-        if ($scope.items) {
+        if ($scope.items.length != 0) {
           console.log($scope.items);
           var percent = 100 * ($scope.getDone()/$scope.getTotal());
           return Math.round(percent) + "%";
@@ -61,6 +61,7 @@ angular.module('checklist.controllers', [])
           return Math.round(decimal);
         }
       }
+
     promise.then(function() {
         console.log(JSON.stringify($scope.items));
     })
