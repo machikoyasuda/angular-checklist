@@ -30,6 +30,11 @@ h1 {
   margin-bottom: 10px;
 }
 
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
 .checkbox {
   float: right;
   margin-right: -25px;
