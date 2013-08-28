@@ -48,7 +48,6 @@ angular.module('checklist.controllers', [])
 
       $scope.getPercent = function(){
         if ($scope.items.length != 0) {
-          console.log($scope.items);
           var percent = 100 * ($scope.getDone()/$scope.getTotal());
           return Math.round(percent) + "%";
         }
@@ -56,7 +55,6 @@ angular.module('checklist.controllers', [])
 
       $scope.getDecimal = function(){
         if ($scope.items) {
-          console.log($scope.items);
           var decimal = ($scope.getDone()/$scope.getTotal());
           return Math.round(decimal);
         }

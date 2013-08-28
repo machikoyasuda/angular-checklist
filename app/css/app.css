@@ -32,7 +32,7 @@ h1 {
 
 .status-true {
   text-decoration: line-through;
-  color: grey;
+  color: rgb(152,126,59);
 }
 
 .checkbox {
