@@ -9,14 +9,13 @@
 </head>
 <body data-ng-controller="ItemCtrl">
   <header>
-    <h1>Checklist »</h1>
+    <h1>Checklist »</h1><span id="top">{{getPercent()}}</span>
   </header>
 
   <section>
-    <h2>You have {{getRemaining()}} items left.</h2>
     <form>
       <ul>
-        <li><input class="form" type="text" data-ng-model="text" autofocus placeholder="Start." style="border-bottom: 2px solid rgba(130,201,195,.9); width: 85%;" ><input type="submit" value="+" data-ng-click="addItem()" class="button"></li>
+        <li><input class="form" type="text" data-ng-model="text" autofocus placeholder="Start." style="border-bottom: 2px solid rgba(130,201,195,.9); width: 85%;" ><input type="submit" value="+" data-ng-click="addItem()" class="graphite-flat-button"></li>
 
         <li class="text status-{{item.status}}" data-ng-repeat="item in list.items"><span class="item">{{item.text}}</span><input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox"></li>
       </ul>
