@@ -17,7 +17,9 @@ angular.module('checklist.controllers', [])
         }
         $scope.list.items = $scope.items;
         $scope.text = '';
-        // console.log(JSON.stringify($scope.items));
+        console.log(JSON.stringify($scope.items));
+        console.log($scope.items.length);
+        console.log($scope.items.length);
       }
 
       $scope.getTotal = function(){
@@ -34,8 +36,33 @@ angular.module('checklist.controllers', [])
         return count
       }
 
+      $scope.getDone = function(){
+        var count = 0;
+        $scope.items.forEach (function(item, index, items){
+          if(item.status){
+            count = count + 1;
+          }
+        });
+        return count
+      }
+
+      $scope.getPercent = function(){
+        if ($scope.items) {
+          console.log($scope.items);
+          var percent = 100 * ($scope.getDone()/$scope.getTotal());
+          return Math.round(percent) + "%";
+        }
+      }
+
+      $scope.getDecimal = function(){
+        if ($scope.items) {
+          console.log($scope.items);
+          var decimal = ($scope.getDone()/$scope.getTotal());
+          return Math.round(decimal);
+        }
+      }
     promise.then(function() {
-      $scope.$watch('list', $scope);
+        console.log(JSON.stringify($scope.items));
     })
 
   }]);
