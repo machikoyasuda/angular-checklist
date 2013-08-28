@@ -8,7 +8,6 @@ body {
 }
 
 header {
-  background-color: rgba(217,77,75, .4);
   padding-top: .1em;
   padding-bottom: .1em;
   border-bottom: 2px solid white;
@@ -19,13 +18,13 @@ h1 {
   font-weight: 400;
   font-size: 18px;
   color: white;
+  padding-left: .3em;
   text-transform: uppercase;
   text-shadow: -5px 5px 0px rgba(152,126,59,.9);
 }
 
 #top {
-  background-color: rgba(130,201,195,.9);
-/*  content: {{getPercent()}};*/
+  background-color: rgba(130,201,195,.8);
   display: block;
   color: #fff;
   border-radius: 50%;
@@ -34,6 +33,10 @@ h1 {
   padding: .4em;
   margin-right: .2em;
   float: right;
+}
+
+.progress {
+  background-color: rgba(217,77,75, .3);
 }
 
 h2 {
@@ -77,6 +80,8 @@ ul, li {
   color: #ffffff;
   margin-bottom: 10px;
   padding-left: .3em;
+  border-bottom: 2px solid rgba(130,201,195,.9);
+  width: 85%;
 }
 
 .checkbox {
@@ -84,31 +89,26 @@ ul, li {
   margin-right: 2em;
 }
 
-/* #Graphite Flat Button
-==================================================*/
 .graphite-flat-button {
   position: relative;
   vertical-align: top;
-  margin-right: 1em;
-  width: 5%;
-  height: 5%;
+  margin-right: 5px;
+  width: 2em;
+  height: 2em;
   float: right;
   padding: 0;
   font-size: 18px;
-  color:white;
+  color: white;
   text-align: center;
   background: #454545;
   border: 0;
   cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border-radius: 50%;
 }
+
 .graphite-flat-button:active {
   top: 1px;
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.progress {
-
 }

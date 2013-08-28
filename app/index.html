@@ -8,14 +8,14 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 </head>
 <body data-ng-controller="ItemCtrl">
-  <header>
-    <h1>Checklist »</h1><span id="top">{{getPercent()}}</span>
+  <header style="background-color: rgba(217,77,75, .4);">
+    <div class="progress" style="width: {{getPercent()}}"><h1>Checklist »</h1></div><span id="top">{{getPercent()}}</span>
   </header>
 
   <section>
     <form>
       <ul>
-        <li><input class="form" type="text" data-ng-model="text" autofocus placeholder="Start." style="border-bottom: 2px solid rgba(130,201,195,.9); width: 85%;" ><input type="submit" value="+" data-ng-click="addItem()" class="graphite-flat-button"></li>
+        <li><input class="form" type="text" data-ng-model="text" autofocus placeholder="Start."><input type="submit" value="+" data-ng-click="addItem()" class="graphite-flat-button"></li>
 
         <li class="text status-{{item.status}}" data-ng-repeat="item in list.items"><span class="item">{{item.text}}</span><input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox"></li>
       </ul>
@@ -23,7 +23,7 @@
   </section>
 
   <footer>
-    <div id="progress" style="background-color: rgba(217,77,75, .4); width: {{getPercent()}}">{{getDone()}}/{{getTotal()}} = {{getPercent()}}</div>
+    <span>Send to friend | About | Made by Machiko</span>
   </footer>
 
   <!-- In production use:
