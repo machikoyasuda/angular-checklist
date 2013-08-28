@@ -8,7 +8,7 @@ body {
 }
 
 .wrap {
-  max-width: 320px;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@ h1 {
   background-color: rgba(0,0,0,0);
   border-style: none;
   color: #ffffff;
-  width: 80%;
+  width: 75%;
   border-bottom: 2px solid rgba(130,201,195,.9);
   margin-bottom: 10px;
 }
