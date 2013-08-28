@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="css/app.css"/>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body data-ng-controller="ItemCtrl">
   <header>
     <h1>Checklist »</h1>
   </header>
-  <section data-ng-controller="ItemCtrl">
-    <h2>You have {{getRemaining()}} items left.</h2>
 
+  <section>
+    <h2>You have {{getRemaining()}} items left.</h2>
     <form>
       <ul>
-        <li><input type="text" class="text" id="form" data-ng-model="text" autofocus placeholder="Start listing."><input type="submit" value="+" data-ng-click="addItem()" class="button"></li>
+        <li><input class="form" type="text" data-ng-model="text" autofocus placeholder="Start." style="border-bottom: 2px solid rgba(130,201,195,.9); width: 85%;" ><input type="submit" value="+" data-ng-click="addItem()" class="button"></li>
 
-        <li class="text status-{{item.status}}" data-ng-repeat="item in list.items">{{item.text}}
-        <input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox"></li>
+        <li class="text status-{{item.status}}" data-ng-repeat="item in list.items"><span class="item">{{item.text}}</span><input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox"></li>
       </ul>
     </form>
-
-  <footer><div id="progress" style="background-color: rgba(217,77,75, .4); width: {{getPercent()}}">{{getDone()}}/{{getTotal()}} = {{getPercent()}}</div></footer>
-
   </section>
+
+  <footer>
+    <div id="progress" style="background-color: rgba(217,77,75, .4); width: {{getPercent()}}">{{getDone()}}/{{getTotal()}} = {{getPercent()}}</div>
+  </footer>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>

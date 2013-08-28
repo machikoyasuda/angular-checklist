@@ -11,36 +11,17 @@ header {
   background-color: rgba(217,77,75, .4);
   padding-top: .1em;
   padding-bottom: .1em;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   margin-bottom: 1em;
 }
 
 h1 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   text-align: center;
   text-transform: uppercase;
   text-shadow: -5px 5px 0px rgba(152,126,59,.9);
-}
-
-.text {
-  font-size: 28px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  background-color: rgba(0,0,0,0);
-  border-style: none;
-  color: #ffffff;
-  border-bottom: 2px solid rgba(130,201,195,.9);
-  margin-bottom: 10px;
-}
-
-ul li {
-  width: 100%;
-}
-
-#form {
-  width: 100%;
 }
 
 h2 {
@@ -49,29 +30,52 @@ h2 {
   font-size: 18px;
 }
 
-.status-true {
-  text-decoration: line-through;
-  color: rgb(152,126,59);
-}
-
-.checkbox {
-  float: right;
-}
-
-.button {
-  float: right;
-  margin-top: -3em;
-  margin-left: -1em;
-}
-
-input:focus {
-  outline: none;
-  color: #ffffff;
-}
-
 ul, li {
   list-style-type: none;
   list-style-position: inside;
   margin: 0;
   padding: 0;
+}
+
+.text {
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: rgba(0,0,0,0);
+  color: #ffffff;
+  border-bottom: 2px solid rgba(130,201,195,.9);
+  margin-bottom: 10px;
+}
+
+.status-true {
+  text-decoration: line-through;
+  color: rgb(152,126,59);
+}
+
+.item {
+  padding-left: .3em;
+}
+
+.form {
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: rgba(0,0,0,0);
+  border-style: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding-left: .3em;
+}
+
+.checkbox, .button{
+  float: right;
+  margin-right: 2em;
+}
+
+.button {
+
+}
+
+.progress {
+
 }
