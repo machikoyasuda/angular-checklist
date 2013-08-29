@@ -7,6 +7,8 @@ body {
   height: 100%;
 }
 
+/** top bar **/
+
 header {
   padding-top: .1em;
   padding-bottom: .1em;
@@ -40,37 +42,13 @@ h1 {
   background-color: rgba(217,77,75, .3);
 }
 
-h2 {
-  text-align: center;
-  font-weight: 300;
-  font-size: 18px;
-}
+/** input and button **/
 
 ul, li {
   list-style-type: none;
   list-style-position: inside;
   margin: 0;
   padding: 0;
-}
-
-.text {
-  font-size: 28px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  background-color: rgba(0,0,0,0);
-  color: #ffffff;
-  border-bottom: 2px solid rgba(130,201,195,.9);
-  margin-bottom: 10px;
-}
-
-.status-true {
-  text-decoration: line-through;
-  text-decoration-color: #fff;
-  color: rgba(152,126,59, .3);
-}
-
-.item {
-  padding-left: .3em;
 }
 
 .form {
@@ -86,11 +64,6 @@ ul, li {
   width: 75%;
 }
 
-.checkbox {
-  float: right;
-  margin-right: 2em;
-}
-
 .graphite-flat-button {
   float: right;
   font-size: 15px;
@@ -99,7 +72,6 @@ ul, li {
   padding: .4em;
   margin-top: .5em;
   margin-right: .2em;
-
   border-radius: 50%;
   font-size: 18px;
   color: white;
@@ -112,8 +84,31 @@ ul, li {
   -moz-appearance: none;
 }
 
-.graphite-flat-button {
+/** list and checkbox **/
+.text {
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: rgba(0,0,0,0);
+  color: #ffffff;
+  border-bottom: 2px solid rgba(130,201,195,.9);
+  margin-bottom: 10px;
+    padding-left: .3em;
 }
+
+.checkbox {
+  float: right;
+  margin-right: 2em;
+}
+
+.status-true {
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+  color: rgba(152,126,59, .3);
+}
+
+
+/* bottom bar */
 
 footer {
   font-weight: 400;
@@ -123,4 +118,10 @@ footer {
   text-transform: uppercase;
   border-top: 2px solid white;
   background-color: rgba(217,77,75, .4);
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
 }
