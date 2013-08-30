@@ -12,9 +12,8 @@ body {
 header {
   padding-top: .1em;
   padding-bottom: .1em;
-  border-bottom: 2px solid white;
   margin-bottom: 1em;
-  background-color: rgba(217,77,75, .4);
+  background-color: rgba(130,201,195,.8);
 }
 
 h1 {
@@ -84,9 +83,8 @@ ul, li {
 }
 
 .start-button {
-  margin-right: 45%;
-  margin-left: 45%;
-  margin-bottom: 20%;
+  display: block;
+  margin: auto;
   background: #454545;
   border: 0;
   cursor: pointer;
@@ -122,16 +120,16 @@ ul, li {
   color: rgba(152,126,59, .3);
 }
 
-
 /* bottom bar */
 
 footer {
+  margin-top: 80%;
   font-weight: 400;
   font-size: 12px;
   text-align: center;
   padding-left: .3em;
   text-transform: uppercase;
-  border-top: 2px solid white;
+  color: white;
   background-color: rgba(217,77,75, .4);
 }
 
