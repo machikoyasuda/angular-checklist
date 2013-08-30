@@ -30,11 +30,8 @@ h1 {
 }
 
 #top {
-/*  background-color: rgba(217,77,75, .7);
-*/  color: #fff;
+  color: #fff;
   font-size: 15px;
-/*  padding: .4em;
-*//*  border-radius: 50%;*/
   position: absolute;
   top: 1.7%;
   right: 2%;
