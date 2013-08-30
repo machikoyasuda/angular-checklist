@@ -1,9 +1,9 @@
-<h2>Welcome:</h2>
+<h2>Start a checklist & get it done with friends</h2>
 <section data-ng-controller="ItemCtrl">
   <form>
-    <input class="form" type="text" data-ng-model="text" autofocus placeholder="Start your list here.">
+    <input class="form" type="text" data-ng-model="text" autofocus placeholder="What do you need?">
   </form>
   <form action="/#/list/{{currentList}}">
-    <button type="submit" data-ng-click="createList()" class="start-button">Get started</button>
+    <button type="submit" data-ng-click="createList()" class="start-button">Get checking</button>
   </form>
 </section>
