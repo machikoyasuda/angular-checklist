@@ -8,7 +8,7 @@ angular.module('checklist.controllers', [])
     'angularFire',
     function($scope, angularFire) {
       var url = 'https://mmy-checklist.firebaseio.com/list';
-      var promise = angularFire(url, $scope, 'list', [{items: []}]);
+      var promise = angularFire(url, $scope, 'list', [{items: ["foo"]}]);
 
       promise.then(function(){
         $scope.currentList = 0;
@@ -18,6 +18,7 @@ angular.module('checklist.controllers', [])
           alert("Your group checklist is created!");
           $scope.list.push({items: []});
           $scope.currentList = $scope.list.length-1;
+
         }
 
         $scope.addItem = function(){
