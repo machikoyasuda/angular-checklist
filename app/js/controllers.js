@@ -19,9 +19,10 @@ angular.module('checklist.controllers', [])
         $scope.createList = function(){
           if($scope.text != null){
             // TO DO: Fix validation - do not allow empty items
-            alert("Your group checklist is created!");
             console.log($scope.text);
             $scope.list.push({items: [{text:$scope.text, status:false}]});
+            console.log($scope.currentList);
+            alert("Your checklist is created! Bookmark this:");
             $scope.currentList = $scope.list.length-1;
           }
           $scope.text = '';

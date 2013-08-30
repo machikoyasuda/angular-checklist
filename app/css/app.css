@@ -7,13 +7,17 @@ body {
   height: 100%;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 /** top bar **/
 
 header {
   padding-top: .1em;
   padding-bottom: .1em;
   margin-bottom: 1em;
-  background-color: rgba(130,201,195,.8);
 }
 
 h1 {
@@ -26,15 +30,14 @@ h1 {
 }
 
 #top {
-  background-color: rgba(217,77,75, .7);
-  display: block;
-  color: #fff;
+/*  background-color: rgba(217,77,75, .7);
+*/  color: #fff;
   font-size: 15px;
-  padding: .4em;
-  border-radius: 50%;
-  margin-top: -3em;
-  margin-right: .2em;
-  float: right;
+/*  padding: .4em;
+*//*  border-radius: 50%;*/
+  position: absolute;
+  top: 1.7%;
+  right: 2%;
 }
 
 .progress {
@@ -61,6 +64,10 @@ ul, li {
   padding-left: .3em;
   border-bottom: 2px solid rgba(130,201,195,.9);
   width: 75%;
+}
+
+.start {
+  width: 100%;
 }
 
 .graphite-flat-button {
