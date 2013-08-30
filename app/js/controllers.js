@@ -6,9 +6,8 @@ angular.module('checklist.controllers', [])
   .controller('ItemCtrl', [
     '$scope',
     'angularFire',
-    '$location',
     '$routeParams',
-    function($scope, angularFire, $location, $routeParams) {
+    function($scope, angularFire, $routeParams) {
       var url = 'https://mmy-checklist.firebaseio.com/list';
       var promise = angularFire(url, $scope, 'list', [{items: [{text:"start", status:false}]}]);
 
@@ -24,12 +23,6 @@ angular.module('checklist.controllers', [])
             console.log($scope.text);
             $scope.list.push({items: [{text:$scope.text, status:false}]});
             $scope.currentList = $scope.list.length-1;
-            console.log($scope.currentList);
-            // $routeParams.currentList = $scope.currentList
-            // console.log($routeParams.currentID);
-            $location.path("/#/list/"+ $scope.currentList);
-            var path  = $location.path();
-            console.log($location.path());
           }
           $scope.text = '';
         }
