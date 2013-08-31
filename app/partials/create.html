@@ -1,7 +1,12 @@
-<h2>Start a checklist & get it done with friends</h2>
+<ul>
+  <ol><span class="etp-pencil"></span>Start a checklist.</ol>
+  <ol><span class="etp-reply"></span>Share it with your friends.</ol>
+  <ol><span class="etp-feather"></span>Get it done together.</ol>
+</ul>
+
 <section data-ng-controller="ItemCtrl">
   <form>
-    <input class="form" type="text" data-ng-model="text" autofocus placeholder="What do you need?">
+    <input class="form start" type="text" data-ng-model="text" autofocus placeholder="What do you need?">
   </form>
   <form action="/#/list/{{currentList}}">
     <button type="submit" data-ng-click="createList()" class="start-button">Get checking</button>

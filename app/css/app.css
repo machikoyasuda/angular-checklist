@@ -1,3 +1,55 @@
+/* Entypo Web Fonts       */
+/* http://www.entypo.com/ */
+@font-face {
+  font-family: "entypo";
+  src: url("/app/css/font/entypo.eot");
+  src: url("/app/css/font/entypo.eot?#iefix") format("embedded-opentype"), url("/app/css/fonts/entypo.woff") format("woff"), url("/app/css/fonts/entypo.ttf") format("truetype"), url("/app/css/fonts/entypo.svg#entypo") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: "entypo";
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon {
+  font-family: "entypo";
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* Use the following CSS code if you want to have a class per icon */
+/*   Instead of a list of all class selectors,
+ *   you can use the generic selector below, but it's slower:
+ *   [class*="etp-"]:before { */
+.etp-phone:before, .etp-mobile:before, .etp-mouse:before, .etp-address:before, .etp-mail:before, .etp-paper-plane:before, .etp-pencil:before, .etp-feather:before, .etp-attach:before, .etp-inbox:before,
+.etp-reply:before, .etp-reply-all:before, .etp-forward:before, .etp-user:before, .etp-users:before, .etp-add-user:before, .etp-vcard:before, .etp-export:before, .etp-location:before, .etp-map:before {
+  font-family: "Entypo";
+  speak: none;
+  font-size: 200%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* mapping characters:: http://www.entypo.com/characters/ */
+
+.etp-mail:before {
+  content: "\2709"; }
+
+.etp-paper-plane:before {
+  content: "\1F53F"; }
+
+.etp-pencil:before {
+  content: "\270E"; }
+
+/** positioning **/
+
 body {
   background-color: rgba(235, 225, 166, 1);
   font-family: 'Roboto', sans-serif;
@@ -6,6 +58,7 @@ body {
   margin: 0;
   height: 100%;
 }
+
 
 /** top bar **/
 
@@ -43,7 +96,7 @@ h1 {
 
 /** input and button **/
 
-ul, li {
+.list {
   list-style-type: none;
   list-style-position: inside;
   margin: 0;
@@ -61,6 +114,14 @@ ul, li {
   padding-left: .3em;
   border-bottom: 2px solid rgba(130,201,195,.9);
   width: 75%;
+}
+
+.start {
+  width: 99%;
+}
+
+.welcome {
+  margin: 0 auto;
 }
 
 .graphite-flat-button {
