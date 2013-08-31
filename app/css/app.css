@@ -21,12 +21,8 @@
   speak: none;
   font-weight: normal;
   line-height: 1;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased; }px
 
-/* Use the following CSS code if you want to have a class per icon */
-/*   Instead of a list of all class selectors,
- *   you can use the generic selector below, but it's slower:
- *   [class*="etp-"]:before { */
 .etp-phone:before, .etp-mobile:before, .etp-mouse:before, .etp-address:before, .etp-mail:before, .etp-paper-plane:before, .etp-pencil:before, .etp-feather:before, .etp-attach:before, .etp-inbox:before,
 .etp-reply:before, .etp-reply-all:before, .etp-forward:before, .etp-user:before, .etp-users:before, .etp-add-user:before, .etp-vcard:before, .etp-export:before, .etp-location:before, .etp-map:before {
   font-family: "Entypo";
@@ -37,13 +33,6 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
-/* mapping characters:: http://www.entypo.com/characters/ */
-
-.etp-mail:before {
-  content: "\2709"; }
-
-.etp-paper-plane:before {
-  content: "\1F53F"; }
 
 .etp-pencil:before {
   content: "\270E"; }
@@ -51,7 +40,7 @@
 /** positioning **/
 
 body {
-  background-color: rgba(235, 225, 166, 1);
+  background-color: rgba(235, 225, 166, .2);
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 26px;
@@ -109,7 +98,7 @@ h1 {
   font-weight: 300;
   background-color: rgba(0,0,0,0);
   border-style: none;
-  color: #ffffff;
+  color: #000;
   margin-bottom: 10px;
   padding-left: .3em;
   border-bottom: 2px solid rgba(130,201,195,.9);
@@ -121,7 +110,10 @@ h1 {
 }
 
 .welcome {
-  margin: 0 auto;
+  font-size: 25px;
+  line-height: 55px;
+  text-align: center;
+  color: rgba(217,77,75, 1);
 }
 
 .graphite-flat-button {
@@ -164,10 +156,10 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   background-color: rgba(0,0,0,0);
-  color: #ffffff;
+  color: #000;
   border-bottom: 2px solid rgba(130,201,195,.9);
   margin-bottom: 10px;
-    padding-left: .3em;
+  padding-left: .3em;
 }
 
 .checkbox {
@@ -185,7 +177,7 @@ h1 {
 
 footer {
   margin-top: 80%;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 12px;
   text-align: center;
   padding-left: .3em;
