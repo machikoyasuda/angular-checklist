@@ -18,7 +18,7 @@ angular.module('checklist.controllers', [])
 
         // Create new list and add first item
         $scope.createList = function(hash){
-          // if($scope.text){
+          if($scope.text){
             // TO DO: Fix validation - do not allow empty items
             alert("Your group checklist is created!");
             console.log($scope.text);
@@ -26,7 +26,7 @@ angular.module('checklist.controllers', [])
             $scope.currentList = $scope.list.length-1;
             console.log($scope.currentList);
             $location.path("/list/" + $scope.currentList);
-          // }
+          }
           $scope.text = '';
         }
 
