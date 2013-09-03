@@ -1,14 +1,20 @@
-<div class="welcome">
-  <br>Start a checklist.</span>
-  <br>Share it with your friends.</span>
-  <br>Get it done together.</span>
-</div>
+<header>
+  <div class="progress">
+    <h1>Checklist</h1>
+  </div>
+</header>
+
+<section id="onboarding">
+  <span class="welcome">1. Start a checklist.</span>
+  <span class="welcome">2. Share with friends.</span>
+  <span class="welcome">3. Get it done.</span>
+</section>
 
 <section data-ng-controller="ItemCtrl">
   <form>
-    <input class="form start" type="text" data-ng-model="text" autofocus placeholder="What do you need?">
+    <input class="form start" type="text" data-ng-model="text" autofocus placeholder="4. List your first item.">
   </form>
   <form>
-    <button type="submit" data-ng-click='createList()' class="start-button">Get checking</button>
+    <button type="submit" data-ng-click='createList()' class="start-button">Get started</button>
   </form>
 </section>

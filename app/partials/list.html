@@ -1,3 +1,10 @@
+<header>
+  <div class="progress" style="width: {{getPercent()}}">
+    <h1>Checklist</h1>
+  </div>
+  <span id="top">{{getPercent()}}</span>
+</header>
+
 <form data-ng-controller="ItemCtrl">
   <ul class="list">
     <li>
