@@ -24,9 +24,7 @@ angular.module('checklist.controllers', [])
             $scope.list.push({items: [{text:$scope.text, status:false}]});
             $scope.currentList = $scope.list.length-1;
             console.log($scope.currentList);
-            window.location.href = "/#/list/" + $scope.currentList
-            // $location.path("/list/" + $scope.currentList);
-            // Disable the url #?
+            $location.path("/list/" + $scope.currentList).replace();
           }
           $scope.text = '';
         }
