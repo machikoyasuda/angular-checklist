@@ -19,16 +19,17 @@ angular.module('checklist.controllers', [])
         // Create new list and add first item
         $scope.createList = function(){
           if($scope.text){
-            alert("Your group checklist is created!");
-            // console.log($scope.text);
             $scope.list.push({items: [{text:$scope.text, status:false}]});
             $scope.currentList = $scope.list.length-1;
             // console.log($scope.currentList);
             $location.path("/list/" + $scope.currentList).replace();
+            alert('Your URL is: ' + $location.absUrl());
+            return false;
           }
           $scope.text = '';
         }
 
+        // Go to About page
         $scope.goAbout = function (){
           $location.path("/about");
         }
