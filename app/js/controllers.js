@@ -16,19 +16,6 @@ angular.module('checklist.controllers', [])
         $scope.newList = 0;
         $scope.currentList = $routeParams.currentList;
 
-        // Create new list and add first item
-        $scope.createList = function(){
-          if($scope.text){
-            $scope.list.push({items: [{text:$scope.text, status:false}]});
-            $scope.currentList = $scope.list.length-1;
-            // console.log($scope.currentList);
-            $location.path("/list/" + $scope.currentList).replace();
-            alert('Your URL is: ' + $location.absUrl());
-            return false;
-          }
-          $scope.text = '';
-        }
-
         // Go to About page
         $scope.goAbout = function (){
           $location.path("/about");
@@ -37,8 +24,8 @@ angular.module('checklist.controllers', [])
         // Add more items with button click, view items
         // Validate: Do not accept empty items
         $scope.addItem = function(){
-          console.log($scope.newItem);
-          console.log($scope.currentList);
+          // console.log($scope.newItem);
+          // console.log($scope.currentList);
           if($scope.newItem){
             $scope.list[$scope.currentList].items.push({text:$scope.newItem, status:false});
           }
@@ -89,4 +76,23 @@ angular.module('checklist.controllers', [])
           }
         }
       })
-  }]);
+  }])
+  .controller('CreateCtrl', [
+    '$scope',
+    'angularFire',
+    '$location',
+    '$routeParams',
+    function($scope, angularFire, $location, $routeParams) {
+      // Create new list and add first item
+      $scope.createList = function(){
+        if($scope.text){
+          $scope.list.push({items: [{text:$scope.text, status:false}]});
+          $scope.currentList = $scope.list.length-1;
+          // console.log($scope.currentList);
+          $location.path("/list/" + $scope.currentList);
+          alert('Your URL is: ' + $location.absUrl());
+          return false;
+        }
+        $scope.text = '';
+      }
+    }]);
