@@ -6,8 +6,9 @@ angular.module('checklist.controllers', [])
   .controller('ItemCtrl', [
     '$scope',
     'angularFire',
+    '$location',
     '$routeParams',
-    function($scope, angularFire, $routeParams) {
+    function($scope, angularFire, $location, $routeParams) {
       var url = 'https://mmy-checklist.firebaseio.com/list';
       var promise = angularFire(url, $scope, 'list', [{items: [{text:"start", status:false}]}]);
 
@@ -17,20 +18,26 @@ angular.module('checklist.controllers', [])
 
         // Create new list and add first item
         $scope.createList = function(){
-          if($scope.text != null){
-            // TO DO: Fix validation - do not allow empty items
-            console.log($scope.text);
+          if($scope.text){
+            alert("Your group checklist is created!");
+            // console.log($scope.text);
             $scope.list.push({items: [{text:$scope.text, status:false}]});
-            console.log($scope.currentList);
-            alert("Your checklist is created! Bookmark this:");
             $scope.currentList = $scope.list.length-1;
+            // console.log($scope.currentList);
+            $location.path("/list/" + $scope.currentList).replace();
           }
           $scope.text = '';
+        }
+
+        $scope.goAbout = function (){
+          $location.path("/about");
         }
 
         // Add more items with button click, view items
         // Validate: Do not accept empty items
         $scope.addItem = function(){
+          console.log($scope.newItem);
+          console.log($scope.currentList);
           if($scope.newItem){
             $scope.list[$scope.currentList].items.push({text:$scope.newItem, status:false});
           }

@@ -8,7 +8,7 @@ angular.module('checklist',
   ]).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/create.html', controller: 'ItemCtrl'});
-    $routeProvider.when('/:currentList', {templateUrl: 'partials/list.html', controller: 'ItemCtrl'});
+    $routeProvider.when('/list/:currentList', {templateUrl: 'partials/list.html', controller: 'ItemCtrl'});
     $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'ItemCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);

@@ -1,14 +1,21 @@
+<header>
+  <div class="progress" style="width: {{getPercent()}}">
+    <h1>Checklist</h1>
+  </div>
+  <span id="top">{{getPercent()}}</span>
+</header>
+
 <form data-ng-controller="ItemCtrl">
-  <ul>
+  <ul class="list">
     <li>
-      <input class="form" type="text" data-ng-model="newItem" autofocus placeholder="Add to your checklist.">
+      <input class="form listed" type="text" data-ng-model="newItem" autofocus placeholder="Add to your checklist.">
       <button type="submit" data-ng-click="addItem()" class="graphite-flat-button">+</button>
     </li>
 
-    <li class="text status-{{item.status}}" data-ng-repeat="item in list[currentList].items">
+    <li class="text status-{{item[currentList].status}}" data-ng-repeat="item in list[currentList].items">
       <span>{{item.text}}</span>
+      <button data-ng-click="deleteItem()" class="trash-button">X</button>
       <input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox">
-      <button data-ng-click="deleteItem()" style="float:right">Trash</button>
     </li>
   </ul>
 </form>
