@@ -102,7 +102,7 @@ a:hover {
 }
 
 .start {
-  width: 93%;
+  width: 90%;
   border-bottom: 3px solid white;
   background-color: rgba(236,181,55, .6);
 }
@@ -132,10 +132,6 @@ input[type='text']:focus{
   border-radius:10px;
   outline:none;
   color: white;
-}
-
-.start {
-  width: 100%;
 }
 
 .graphite-flat-button {
