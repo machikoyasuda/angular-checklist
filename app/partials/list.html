@@ -12,7 +12,7 @@
       <button type="submit" data-ng-click="addItem()" class="graphite-flat-button">+</button>
     </li>
 
-    <li class="text status-{{item[currentList].status}}" data-ng-repeat="item in list[currentList].items">
+    <li class="text status-{{item.status}}" data-ng-repeat="item in list[currentList].items">
       <span>{{item.text}}</span>
       <button data-ng-click="deleteItem()" class="trash-button">X</button>
       <input type="checkbox" data-ng-model="item.status" name="box" value="check" class="checkbox">
