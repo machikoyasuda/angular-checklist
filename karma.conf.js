@@ -15,8 +15,9 @@ module.exports = function(config) {
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+      'https://cdn.firebase.com/v0/firebase.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js'
     ],
 
     // list of files / patterns to exclude

@@ -4,7 +4,8 @@
 angular.module('checklist',
   [
     'firebase',
-    'checklist.controllers'
+    'checklist.controllers',
+    'checklist.services'
   ]).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'views/create.html', controller: 'ItemCtrl'});

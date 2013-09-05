@@ -3,15 +3,39 @@
 /* Controllers */
 
 angular.module('checklist.controllers', [])
-  .controller('ItemCtrl', ['$scope', 'angularFire', '$location', '$routeParams',
-    function($scope, angularFire, $location, $routeParams) {
+  .controller('CreateCtrl', ['$scope', '$location', '$routeParams', 'firebaseFactory',
+    function($scope, $location) {
+      // Create new list and add first item
+      $scope.createList = function(){
+        if($scope.text){
+          $scope.list.push({items: [{text:$scope.text, status:false}]});
+          if( $scope.list.length > 0){
+          $scope.currentList = $scope.list.length-1
+          } else {
+            $scope.currentList = 0;
+          }
+          // console.log($scope.currentList);
+          console.log($location.path)
+          $location.path('/list/' + $scope.currentList);
+          var alert = alert('Your URL is: ' + $location.absUrl());
+          return false;
+        }
+        $scope.text = '';
+      };
+    }])
+  .controller('ItemCtrl', ['$scope', 'firebaseFactory','angularFire', '$location', '$routeParams',
+    function($scope, firebaseFactory, angularFire, $location, $routeParams) {
+      // var promise = firebaseFactory.link($scope, 'list', [{items: [{text:'start', status:false}]}]);
+      console.log($location)
       var url = 'https://mmy-checklist.firebaseio.com/list';
-      var promise = angularFire(url, $scope, 'list', [{items: [{text:'start', status:false}]}]);
-
+      var promise = angularFire(url, $scope, "list", [{items: [{text:'start', status:false}]}]);
+      console.log(promise)
       promise.then(function(){
         $scope.newList = 0;
         $scope.currentList = $routeParams.currentList;
-
+        console.log($scope.list)
+        console.log($routeParams.currentList)
+        console.log($scope.list[$scope.currentList])
         // Go to About page
         $scope.goAbout = function (){
           $location.path('/about');
@@ -72,19 +96,4 @@ angular.module('checklist.controllers', [])
           }
         };
       });
-    }])
-  .controller('CreateCtrl', ['$scope', 'angularFire', '$location', '$routeParams',
-    function($scope, angularFire, $location) {
-      // Create new list and add first item
-      $scope.createList = function(){
-        if($scope.text){
-          $scope.list.push({items: [{text:$scope.text, status:false}]});
-          $scope.currentList = $scope.list.length-1;
-          // console.log($scope.currentList);
-          $location.path('/list/' + $scope.currentList);
-          var alert = alert('Your URL is: ' + $location.absUrl());
-          return false;
-        }
-        $scope.text = '';
-      };
     }]);

@@ -1,22 +1,20 @@
-'use strict';
+(function () {
+  'use strict';
 
-describe('Controller: MainCtrl', function () {
+  describe('checklist', function () {
+    var ctrl, scope;
 
-  // load the controller's module
-  beforeEach(module('angularTestingApp'));
+    // Load the module containing the app, only 'ng' is loaded by default.
+    beforeEach(module('checklist'));
 
-  var MainCtrl,
-    scope;
+    beforeEach(inject(function ($controller, $rootScope) {
+      scope = $rootScope.$new();
+      ctrl = $controller('ItemCtrl', {$scope: scope});
+    }));
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
+    it('expect test to run', function () {
+      expect(true).toBe(true);3
     });
-  }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
   });
-});
+}());
