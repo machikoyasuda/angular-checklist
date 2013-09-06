@@ -17,7 +17,7 @@ angular.module('checklist.controllers', [])
           // console.log($scope.currentList);
           console.log($location.path)
           $location.path('/list/' + $scope.currentList);
-          var alert = alert('Your URL is: ' + $location.absUrl());
+          alert('Your URL is: ' + $location.absUrl());
           return false;
         }
         $scope.text = '';
@@ -25,17 +25,16 @@ angular.module('checklist.controllers', [])
     }])
   .controller('ItemCtrl', ['$scope', 'firebaseFactory','angularFire', '$location', '$routeParams',
     function($scope, firebaseFactory, angularFire, $location, $routeParams) {
-      // var promise = firebaseFactory.link($scope, 'list', [{items: [{text:'start', status:false}]}]);
-      console.log($location)
       var url = 'https://mmy-checklist.firebaseio.com/list';
       var promise = angularFire(url, $scope, "list", [{items: [{text:'start', status:false}]}]);
-      console.log(promise)
+
       promise.then(function(){
         $scope.newList = 0;
         $scope.currentList = $routeParams.currentList;
-        console.log($scope.list)
-        console.log($routeParams.currentList)
-        console.log($scope.list[$scope.currentList])
+        // console.log($scope.list)
+        // console.log($routeParams.currentList)
+        // console.log($scope.list[$scope.currentList])
+
         // Go to About page
         $scope.goAbout = function (){
           $location.path('/about');
