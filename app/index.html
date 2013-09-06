@@ -16,7 +16,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
   </head>
-  <body ng-app="checklist">
+  <body data-ng-app="checklist">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -27,7 +27,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <section class="container" ng-view=""></section>
+    <section class="container" data-ng-view=""></section>
 
     <footer data-ng-controller="ItemCtrl">
       <span ng-click='goAbout()'>Made by Machiko with &#10084;</span>
