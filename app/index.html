@@ -9,11 +9,9 @@
     <title>Checklist</title>
     <meta name="description" content="mobile checklist app">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300'>
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
   </head>
   <body data-ng-app="checklist">
@@ -26,20 +24,17 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <section class="container" data-ng-view=""></section>
-
+    <div class="push"></div>
     <footer data-ng-controller="ItemCtrl">
       <span ng-click='goAbout()'>Made by Machiko with &#10084;</span>
     </footer>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-43842022-1', 'machikoyasuda.github.io');
       ga('send', 'pageview');
     </script>

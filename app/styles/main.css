@@ -16,12 +16,23 @@ html {
   height: 100%;
 }
 
+body{
+  height: 100%;
+}
+
 @media screen and (min-width: 900px) {
   body {
     margin: 0 auto;
     width: 40%;
   }
 }
+
+@media screen and (max-device-width: 480px) {
+  body {
+    margin: 0;
+  }
+}
+
 /** index **/
 
 header {
@@ -66,9 +77,10 @@ footer {
   padding-left: .3em;
   text-transform: uppercase;
   color: white;
-  background-color: rgba(236,181,55, 1);
 }
-
+footer:hover{
+  cursor: pointer;
+}
 /** top bar **/
 
 #top {
